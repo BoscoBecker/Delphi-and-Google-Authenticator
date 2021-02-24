@@ -5,6 +5,7 @@
  ![Screenshot](PrintAuthenticator.png)
  
  Url do app Authenticator Google
+ 
  https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=pt_BR&gl=US
  
  
