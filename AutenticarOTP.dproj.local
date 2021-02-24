@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/10/13 16:44:23.000.489,=C:\Users\joao.becker\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/09 00:10:17.000.376,=C:\Users\joao.becker\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/04 13:12:11.000.489,=C:\Users\joao.becker\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/04 13:12:56.000.965,=C:\Users\joao.becker\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/04 13:14:31.000.896,=C:\Users\joao.becker\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/04 13:15:31.000.031,=C:\Users\joao.becker\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/04 13:16:14.000.626,=C:\Users\joao.becker\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/04 13:16:59.000.527,=C:\Users\joao.becker\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/04 13:18:19.000.020,=C:\Users\joao.becker\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/04 13:20:32.000.463,=C:\Users\joao.becker\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/23 20:33:00.983,=C:\Users\joao.becker\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/24 14:21:04.469,C:\Users\joao.becker\Desktop\Delphi e Google Authenticator\UAuthenticator.pas=C:\Users\joao.becker\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/24 14:21:04.469,C:\Users\joao.becker\Desktop\Delphi e Google Authenticator\UAuthenticator.dfm=C:\Users\joao.becker\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/02/24 14:21:17.616,C:\Users\joao.becker\Desktop\Delphi e Google Authenticator\AutenticarOTP.dproj=C:\Users\joao.becker\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
