@@ -20,20 +20,27 @@ type
     lblSuaKey: TLabel;
     tsAutomatico: TToggleSwitch;
     lblCodigo: TLabel;
+    btnValidar: TButton;
+    lblValido: TLabel;
     procedure btnGerarTokenClick(Sender: TObject);
     procedure edtSECRETKEYTOPExit(Sender: TObject);
     procedure tsAutomaticoClick(Sender: TObject);
     procedure TsManualClick(Sender: TObject);
     procedure tmAtualizaTokenTimer(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure btnValidarClick(Sender: TObject);
   private
     { Private declarations }
-    Fkey : String;
+    var Fkey: String;
+        Fcodigo: integer;
     function Validar( codigo : String) : String;
     function SetOTP_SECRET_KEY(Key : String): String;
     function GeraToken(OTPSECRET : String) : String;
   public
     { Public declarations }
     property key  : String read FKey;
+    property codigo : integer read FCodigo;
+    procedure Create(); reintroduce;
   end;
 
 var
@@ -55,9 +62,27 @@ begin
    lblToken.Caption := GeraToken(Fkey);
 end;
 
+procedure TForm1.btnValidarClick(Sender: TObject);
+begin
+   lblValido.Caption:= Validar(IntToStr(Fcodigo));
+end;
+
+procedure TForm1.Create;
+begin
+   // Caso já tenha a key informada,
+   // sem ser usada no evento OnExit()
+   if not(edtSECRETKEYTOP.Text =  EmptyStr) then
+     SetOTP_SECRET_KEY(edtSECRETKEYTOP.Text);
+end;
+
 procedure TForm1.edtSECRETKEYTOPExit(Sender: TObject);
 begin
    SetOTP_SECRET_KEY(edtSECRETKEYTOP.Text);
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  Create;
 end;
 
 function TForm1.GeraToken(OTPSECRET: String): String;
@@ -71,7 +96,8 @@ begin
    end;
 
    vToken := CalculateOTP(Fkey);
-   Result := Format('%.6d',[vToken]);
+   Fcodigo := vToken;
+   Result := copy(Format('%.6d',[vToken]),1,3) + ' '+copy(Format('%.6d',[vToken]),4,6)  ;
 end;
 
 function TForm1.SetOTP_SECRET_KEY(Key: String): String;

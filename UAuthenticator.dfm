@@ -13,6 +13,7 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object grTop: TGroupBox
@@ -47,14 +48,14 @@ object Form1: TForm1
   end
   object grbase: TGroupBox
     Left = 8
-    Top = 76
+    Top = 78
     Width = 553
     Height = 153
     TabOrder = 1
     object lblToken: TLabel
-      Left = 136
+      Left = 135
       Top = 94
-      Width = 246
+      Width = 130
       Height = 33
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -89,6 +90,19 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
     end
+    object lblValido: TLabel
+      Left = 406
+      Top = 104
+      Width = 133
+      Height = 24
+      Caption = 'Valido'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -20
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
     object btnGerarToken: TButton
       Left = 32
       Top = 103
@@ -114,10 +128,20 @@ object Form1: TForm1
       Top = 42
       Width = 133
       Height = 20
+      State = tssOn
       StateCaptions.CaptionOn = 'Mostrar Senha'
       StateCaptions.CaptionOff = 'Esconder Senha'
       TabOrder = 2
       OnClick = tsAutomaticoClick
+    end
+    object btnValidar: TButton
+      Left = 304
+      Top = 104
+      Width = 91
+      Height = 25
+      Caption = 'Validar Token'
+      TabOrder = 3
+      OnClick = btnValidarClick
     end
   end
   object tmAtualizaToken: TTimer
