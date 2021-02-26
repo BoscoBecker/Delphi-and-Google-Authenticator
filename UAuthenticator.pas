@@ -38,8 +38,8 @@ type
     function GeraToken(OTPSECRET : String) : String;
   public
     { Public declarations }
-    property key  : String read FKey;
-    property codigo : integer read FCodigo;
+    property key: String read FKey;
+    property codigo: integer read FCodigo;
     procedure Create(); reintroduce;
   end;
 
@@ -49,11 +49,6 @@ var
 implementation
 
 {$R *.dfm}
-
-
-
-{ TForm1 }
-
 
 { TForm1 }
 
@@ -69,9 +64,8 @@ end;
 
 procedure TForm1.Create;
 begin
-   // Caso já tenha a key informada,
-   // sem ser usada no evento OnExit()
-   if not(edtSECRETKEYTOP.Text =  EmptyStr) then
+   /// Caso já tenha a key informada, sem ser usada no evento OnExit()
+   if not(edtSECRETKEYTOP.Text = EmptyStr) then
      SetOTP_SECRET_KEY(edtSECRETKEYTOP.Text);
 end;
 
@@ -89,15 +83,16 @@ function TForm1.GeraToken(OTPSECRET: String): String;
 var
   vToken : integer;
 begin
-   if OTPSECRET.IsEmpty then
-   begin
-     tmAtualizaToken.Enabled:= false;
-     raise Exception.Create('Chave não informada!');
-   end;
+  if OTPSECRET.IsEmpty then
+  begin
+    tmAtualizaToken.Enabled:= false;
+    raise Exception.Create('Key não informada!');
+  end;
 
-   vToken := CalculateOTP(Fkey);
-   Fcodigo := vToken;
-   Result := copy(Format('%.6d',[vToken]),1,3) + ' '+copy(Format('%.6d',[vToken]),4,6)  ;
+  vToken := CalculateOTP(Fkey);
+  Fcodigo := vToken;
+  /// Formatação padrão Google
+  Result := copy(Format('%.6d',[vToken]),1,3) + ' ' + copy(Format('%.6d',[vToken]),4,6)  ;
 end;
 
 function TForm1.SetOTP_SECRET_KEY(Key: String): String;

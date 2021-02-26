@@ -37,8 +37,8 @@ object Form1: TForm1
     end
     object TsManual: TToggleSwitch
       Left = 401
-      Top = 34
-      Width = 110
+      Top = 21
+      Width = 133
       Height = 20
       StateCaptions.CaptionOn = 'Autom'#225'tico'
       StateCaptions.CaptionOff = 'Manual'
@@ -55,8 +55,9 @@ object Form1: TForm1
     object lblToken: TLabel
       Left = 135
       Top = 94
-      Width = 130
+      Width = 146
       Height = 33
+      AutoSize = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -27
@@ -91,11 +92,11 @@ object Form1: TForm1
       ParentFont = False
     end
     object lblValido: TLabel
-      Left = 406
+      Left = 387
       Top = 104
-      Width = 133
+      Width = 150
       Height = 24
-      Caption = 'Valido'
+      AutoSize = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -20
@@ -116,7 +117,7 @@ object Form1: TForm1
     object edtSECRETKEYTOP: TEdit
       Left = 136
       Top = 41
-      Width = 209
+      Width = 242
       Height = 21
       PasswordChar = '*'
       TabOrder = 1
@@ -126,16 +127,16 @@ object Form1: TForm1
     object tsAutomatico: TToggleSwitch
       Left = 401
       Top = 42
-      Width = 133
+      Width = 121
       Height = 20
       State = tssOn
-      StateCaptions.CaptionOn = 'Mostrar Senha'
-      StateCaptions.CaptionOff = 'Esconder Senha'
+      StateCaptions.CaptionOn = 'Mostrar Key'
+      StateCaptions.CaptionOff = 'Esconder Key'
       TabOrder = 2
       OnClick = tsAutomaticoClick
     end
     object btnValidar: TButton
-      Left = 304
+      Left = 287
       Top = 104
       Width = 91
       Height = 25
