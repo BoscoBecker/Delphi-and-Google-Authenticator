@@ -6,9 +6,4 @@
 
 ![Screenshot](PrintAuthenticator.png)
  
- Url of app Authenticator Google
- 
- https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=pt_BR&gl=US
- 
- 
- Make With ❤ @boscobecker.
+From https://github.com/wendelb/DelphiOTP
